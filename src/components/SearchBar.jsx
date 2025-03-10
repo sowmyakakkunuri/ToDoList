@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import './App.css';
+// import './App.css';
 import DisplayItems from './DisplayItems';
 // import {BsSearch} from react-icons/bs
 const SearchBar = ({data}) => {
