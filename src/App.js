@@ -20,9 +20,9 @@
 import './App.css';
 
 
-import useFetchRequiredData from './CustomHook/FetchRequiredData';
-import SearchComponent from './CustomHook/SearchComponent';
-import DisplayComponent from './CustomHook/DisplayComponent';
+import useFetchRequiredData from './CustomHookComponents/FetchRequiredData';
+import SearchComponent from './CustomHookComponents/SearchComponent';
+import DisplayComponent from './CustomHookComponents/DisplayComponent';
 
 function App() {
   const {data, filteredData, handleSearchClick} = useFetchRequiredData();
