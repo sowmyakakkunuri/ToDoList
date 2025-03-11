@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react'
-// import './App.css';
+import React, { useEffect, useState } from 'react';
 import DisplayItems from './DisplayItems';
-// import {BsSearch} from react-icons/bs
+
 const SearchBar = ({data}) => {
     const [val,setValue] =useState("");
     const [filteredData,SetFiltereddata] = useState();
@@ -32,8 +31,6 @@ const SearchBar = ({data}) => {
           value={val}
           />
           <button onClick={handleSearchClick}>Search</button>
-         
-
           
                 <DisplayItems list={filteredData}/>
       </div>

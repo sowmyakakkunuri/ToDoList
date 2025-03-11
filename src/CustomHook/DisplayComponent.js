@@ -1,16 +1,14 @@
 import React from 'react'
-const DisplayItems = ({list}) => {
+const DisplayComponent = ({filteredInfo}) => {
+
   return (
     <div>
             <ul>{
-            
-               
-
-                list?.map(item=>(
+                filteredInfo?.map(item=>(
                   <div className="todo-item">
         <p>itemId: {item.id}, userId: {item.userId}</p>
         <p>title: {item.title}</p>
-        <p>status: {item.completed? "Completed":"Not Completde"}</p>
+        <p>status: {item.completed? "Completed":"Not Completed"}</p>
     </div>
                 ))
                 }</ul>
@@ -18,4 +16,4 @@ const DisplayItems = ({list}) => {
   )
 }
 
-export default DisplayItems
+export default DisplayComponent
