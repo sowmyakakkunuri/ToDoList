@@ -1,5 +1,4 @@
 import React from 'react'
-import SingleItem from './SingleItem'
 const DisplayItems = ({list}) => {
   return (
     <div>
@@ -8,7 +7,11 @@ const DisplayItems = ({list}) => {
                
 
                 list?.map(item=>(
-                  <SingleItem key={item.id} item={item}/>
+                  <div className="todo-item">
+        <p>itemId: {item.id}, userId: {item.userId}</p>
+        <p>title: {item.title}</p>
+        <p>status: {item.completed? "true":"false"}</p>
+    </div>
                 ))
                 }</ul>
                 </div>
