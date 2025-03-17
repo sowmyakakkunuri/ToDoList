@@ -20,17 +20,17 @@
 import './App.css';
 
 
-import useFetchRequiredData from './CustomHookComponents/FetchRequiredData';
-import SearchComponent from './CustomHookComponents/SearchComponent';
-import DisplayComponent from './CustomHookComponents/DisplayComponent';
+import useFetchRequiredData from './hooks/useFetchRequiredData';
+import SearchComponent from './components/SearchComponent';
+import DisplayComponent from './components/DisplayComponent';
 
 function App() {
-  const {data, filteredData, handleSearchClick} = useFetchRequiredData();
+  const {data, filteredData, handleSearchClick, loading, error, setError} = useFetchRequiredData();
 
   return (
     <div className="container">
       <SearchComponent handleSearch={handleSearchClick}/>
-      <DisplayComponent filteredInfo={filteredData}/>
+      <DisplayComponent filteredInfo={filteredData} loadingStatus={loading} displayError={error} setError={setError}/>
     </div>
   );
 }
