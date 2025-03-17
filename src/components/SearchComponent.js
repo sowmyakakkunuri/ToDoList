@@ -5,12 +5,7 @@ const SearchComponent = ({handleSearch}) => {
     const [status, setStatus] = useState("");
 
     function handleSearchClick(){
-      // if(!filterType || filterType.length===0){
-      //   alert("Enter a filter type");
-      // }
-      // else{
         handleSearch(val, filterType, status);
-      // }
     }
 
   return (

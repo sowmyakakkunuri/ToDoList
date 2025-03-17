@@ -51,7 +51,7 @@ const useFetchRequiredData = () => {
         
     }
   return (
-    {data, filteredData, handleSearchClick, loading, error, setError}
+    {data, filteredData, handleSearchClick, loading, error}
   )
 }
 

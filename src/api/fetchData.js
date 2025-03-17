@@ -27,10 +27,6 @@ export async function SearchToDos(data,searchValue, filterType, status) {
         
     }
 
-    // if(!searchValue.trim() && filterType==="" && status!=""){
-
-    // }
-
     try{
         let filteredBySearch= data.filter((item)=>{
             if(filterType!=""){
@@ -60,10 +56,6 @@ export async function SearchToDos(data,searchValue, filterType, status) {
             else if(status === "due") return item.completed===false;
     
         })
-    
-        // finalResult = finalResult && filteredBySearch;
-    
-        // return filteredBySearch.length>0? filteredBySearch:[];
         return finalResult.length>0? finalResult:[];
     }catch(e){
         throw new Error(e);

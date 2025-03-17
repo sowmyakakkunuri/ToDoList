@@ -25,12 +25,12 @@ import SearchComponent from './components/SearchComponent';
 import DisplayComponent from './components/DisplayComponent';
 
 function App() {
-  const {data, filteredData, handleSearchClick, loading, error, setError} = useFetchRequiredData();
+  const {data, filteredData, handleSearchClick, loading, error} = useFetchRequiredData();
 
   return (
     <div className="container">
       <SearchComponent handleSearch={handleSearchClick}/>
-      <DisplayComponent filteredInfo={filteredData} loadingStatus={loading} displayError={error} setError={setError}/>
+      <DisplayComponent filteredInfo={filteredData} loadingStatus={loading} displayError={error} />
     </div>
   );
 }

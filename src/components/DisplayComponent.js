@@ -11,9 +11,7 @@ const DisplayComponent = ({filteredInfo, loadingStatus, displayError, setError})
   
   if(displayError!=""){
     return(
-      <>
       <h3>{displayError}</h3>
-      </>
     )
     
   }
