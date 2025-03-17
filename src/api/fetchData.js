@@ -29,7 +29,7 @@ export async function SearchToDos(data,searchValue, filterType, status) {
 
     try{
         let filteredBySearch= data.filter((item)=>{
-            if(filterType!=""){
+            if(filterType!==""){
                 if(!(searchValue.trim())){
                     throw new Error(`Enter a ${filterType}`);
                 }

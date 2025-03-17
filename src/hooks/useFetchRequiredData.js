@@ -8,6 +8,7 @@ const useFetchRequiredData = () => {
     const [filteredData,SetFiltereddata] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
+
     
 
     useEffect(()=>{
@@ -17,10 +18,7 @@ const useFetchRequiredData = () => {
                     setData(fetchedData);
                     SetFiltereddata(fetchedData);
                 }catch(e){
-                // setLoading(false);
                 setError(e.message);
-
-                // alert(e.message);
             }finally{
                 setLoading(false);
             }
@@ -46,10 +44,8 @@ const useFetchRequiredData = () => {
             setLoading(false);
         }
         
-
-        
-        
     }
+
   return (
     {data, filteredData, handleSearchClick, loading, error}
   )

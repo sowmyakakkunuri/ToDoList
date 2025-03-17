@@ -1,5 +1,5 @@
 import React from 'react'
-const DisplayComponent = ({filteredInfo, loadingStatus, displayError, setError}) => {
+const DisplayComponent = ({filteredInfo, loadingStatus, displayError}) => {
 
   if(loadingStatus) return (
     <>

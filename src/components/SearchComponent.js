@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-const SearchComponent = ({handleSearch}) => {
+const SearchComponent = ({handleSearch, }) => {
     const [val,setValue] =useState("");
     const [filterType, setFilterType] =useState("");
     const [status, setStatus] = useState("");
@@ -7,6 +7,7 @@ const SearchComponent = ({handleSearch}) => {
     function handleSearchClick(){
         handleSearch(val, filterType, status);
     }
+
 
   return (
         <>
@@ -20,6 +21,7 @@ const SearchComponent = ({handleSearch}) => {
           </select>
             <div>
 
+              {/* {filterTypeDropDown()}; */}
               <div>
 
                 <select onChange={(e)=>setStatus(e.target.value)} value={status}>
