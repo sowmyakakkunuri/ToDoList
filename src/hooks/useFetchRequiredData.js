@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { useEffect } from 'react';
 
-import { fetchToDoList, SearchToDos } from "../api/fetchData";
+import { fetchToDoList } from "../api/fetchData";
+import { fetchSearchValue } from '../api/fetchSearchValue';
 
 const useFetchRequiredData = () => {
     const [data,setData] =useState([]);
@@ -32,14 +33,15 @@ const useFetchRequiredData = () => {
     async function handleSearchClick(val, filterType, status) {
         setLoading(true);
         try{
-            const result = await SearchToDos(data, val, filterType, status);
+            const result = await fetchSearchValue(data, val, filterType, status);
             console.log(result)
             SetFiltereddata(result);
             setError("");
         }catch(e){
+
             console.log(e);
             setError(e.message);
-            // alert("Failed to search");
+            // alert("Faile d to search");
         }finally{
             setLoading(false);
         }
@@ -47,7 +49,7 @@ const useFetchRequiredData = () => {
     }
 
   return (
-    {data, filteredData, handleSearchClick, loading, error}
+    {data, filteredData, handleSearchClick, loading, error, setError}
   )
 }
 
